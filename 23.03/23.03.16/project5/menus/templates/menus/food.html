@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>주문해주세요!</h1>
+    <hr>
+    {% for f in food %}
+        {{f}}
+        <br>
+        <br>
+    {% endfor %}
+    {% include 'order.html' %}
+{% endblock content %}
