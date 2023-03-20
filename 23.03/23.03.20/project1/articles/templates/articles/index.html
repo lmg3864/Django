@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-center">articles</h1>
+    <p class="mx-5"><a href="{% url 'articles:new'%}">new</a></p>
+    <hr class="mx-5">
+    {% for article in articles %}
+        <p class="mx-5">글 번호: {{article.pk}}</p>
+        <p class="mx-5">글 제목: {{article.title}}</p>
+        <p class="mx-5">글 내용: {{article.content}}</p>
+        <hr class="mx-5">
+    {% endfor %}
+{% endblock content %}
